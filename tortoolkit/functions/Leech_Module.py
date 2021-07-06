@@ -107,16 +107,6 @@ async def check_link(msg,rclone=False,is_zip=False, extract=False, prev_msg=None
                     else:
                         dl_path = newpath
                 
-                tm = [84 , 
-                73 , 77 , 69 , 
-                95 , 83 , 
-                84 , 65 , 84]
-                strfg=""
-                for i in tm:
-                    strfg += chr(i)
-                if os.environ.get(strfg, False):
-                    return
-                
                 if not rclone:
                     ul_size = calculate_size(dl_path)
                     ul_task = TGUploadTask(dl_task)
@@ -168,16 +158,6 @@ async def check_link(msg,rclone=False,is_zip=False, extract=False, prev_msg=None
                         pass
                     else:
                         dl_path = newpath
-                
-                tm = [84 , 
-                73 , 77 , 69 , 
-                95 , 83 , 
-                84 , 65 , 84]
-                strfg=""
-                for i in tm:
-                    strfg += chr(i)
-                if os.environ.get(strfg, False):
-                    return
 
                 if not rclone:
                     # TODO add exception update for tg upload everywhere
@@ -239,16 +219,6 @@ async def check_link(msg,rclone=False,is_zip=False, extract=False, prev_msg=None
                         pass
                     else:
                         dl_path = newpath
-
-                tm = [84 , 
-                73 , 77 , 69 , 
-                95 , 83 , 
-                84 , 65 , 84]
-                strfg=""
-                for i in tm:
-                    strfg += chr(i)
-                if os.environ.get(strfg, False):
-                    return
                 
                 if not rclone:
                     ul_size = calculate_size(dl_path)
