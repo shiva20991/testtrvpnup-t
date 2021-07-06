@@ -4,9 +4,9 @@
   "keywords": [
     "telegram","bot","torrent","leech"
   ],
-  "repository": "https://github.com/AmirulAndalib/Torroku",
-  "success_url": "https://github.com/AmirulAndalib/Torroku",
-  "website": "https://github.com/AmirulAndalib/Torroku",
+  "repository": "https://github.com/shiva20991/testtrvpnup-t",
+  "success_url": "https://github.com/shiva20991/testtrvpnup-t",
+  "website": "https://github.com/shiva20991/testtrvpnup-t",
   "env": {
     "BOT_TOKEN": {
       "description": "Your bot token, as a string.",
