@@ -62,7 +62,7 @@ ExecVarsSample.py location:- `tortoolkit/consts/ExecVarsSample.py`
 
 ### [Deploy with Docker Video](https://youtu.be/c8_TU1sPK08)
 
-# [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AmirulAndalib/TorRoku)
+# [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shiva20991/testtrvpnup)
 
 Steps:-
 1. You should install docker first :- [How to Install Docker](https://docs.docker.com/engine/install/)
