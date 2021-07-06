@@ -107,6 +107,8 @@ async def check_link(msg,rclone=False,is_zip=False, extract=False, prev_msg=None
                     else:
                         dl_path = newpath
                 
+# REMOVED HEROKU BLOCK
+                
                 if not rclone:
                     ul_size = calculate_size(dl_path)
                     ul_task = TGUploadTask(dl_task)
@@ -158,6 +160,8 @@ async def check_link(msg,rclone=False,is_zip=False, extract=False, prev_msg=None
                         pass
                     else:
                         dl_path = newpath
+                
+# REMOVED  HEROKU BLOCK
 
                 if not rclone:
                     # TODO add exception update for tg upload everywhere
@@ -219,6 +223,8 @@ async def check_link(msg,rclone=False,is_zip=False, extract=False, prev_msg=None
                         pass
                     else:
                         dl_path = newpath
+
+# REMOVED  HEROKU BLOCK
                 
                 if not rclone:
                     ul_size = calculate_size(dl_path)
@@ -249,7 +255,9 @@ async def check_link(msg,rclone=False,is_zip=False, extract=False, prev_msg=None
             return dl_path
         
         else:
+            urls = msg.raw_text
             url = msg.raw_text
+
             rmsg = await omess.reply("**Processing the link...**")
             
             path = None
@@ -276,7 +284,7 @@ async def check_link(msg,rclone=False,is_zip=False, extract=False, prev_msg=None
                         await errored_message(omess, rmsg)
                         return
                     else:
-                        await rmsg.edit(f"**Found directs:** `{url}`")
+                        await rmsg.edit(f"**Found direct:** `{url}`")
                         await aio.sleep(2)
 
                 try:
@@ -332,7 +340,7 @@ async def check_link(msg,rclone=False,is_zip=False, extract=False, prev_msg=None
                         torlog.exception("Exception in Direct links.")
                     
                     await ul_task.set_inactive()
-                    await print_files(omess,rdict, path = path, size=ul_size)
+                    await print_files(omess,rdict,dl_task.hash, path = dl_path, size=ul_size)
                     torlog.info("Here are the files to be uploaded {}".format(rdict))
                 else:
                     res = await rclone_driver(path,rmsg, omess, dl_task)
@@ -546,7 +554,7 @@ def calculate_size(path):
             torlog.warning("Size Calculation Failed.")
             return 0
     else:
-        return 0        
+        return 0
 
 
 async def get_transfer():
